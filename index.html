@@ -62,8 +62,8 @@
         var pendingVal;
         var evalStringArray = [];
 
-        var calcNumBtns = document.getElementByClassName('calc-btn-num');
-        var calcOperatorBtns = document.getElementByClassName('calc-btn-operator');
+        var calcNumBtns = document.getElementsByClassName('calc-btn-num');
+        var calcOperatorBtns = document.getElementsByClassName('calc-btn-operator');
         
         var updateDisplayVal = (clickObj) => {
             var btnText = clickObj.target.innerText;
@@ -79,7 +79,7 @@
             var operator = clickObj.target.innerText;
 
             switch (operator) {
-                case '+':
+                case 'calc-add':
                     pendingVal = displayVal;
                     displayVal = '0';
                     displayValElement.innerText = displayVal;
@@ -87,7 +87,7 @@
                     evalStringArray.push('+');
                     break;
 
-                case '-':
+                case 'calc-subtract':
                     pendingVal = displayVal;
                     displayVal = '0';
                     displayValElement.innerText = displayVal;
@@ -95,7 +95,7 @@
                     evalStringArray.push('-');
                     break;
 
-                case 'x':
+                case 'calc-multiply':
                     pendingVal = displayVal;
                     displayVal = '0';
                     displayValElement.innerText = displayVal;
@@ -103,7 +103,7 @@
                     evalStringArray.push('*');
                     break;
 
-                case '&#247':
+                case 'calc-divide':
                     pendingVal = displayVal;
                     displayVal = '0';
                     displayValElement.innerText = displayVal;
@@ -111,7 +111,7 @@
                     evalStringArray.push('/');
                     break;
 
-                case '=':
+                case 'calc-equals':
                     evalStringArray.push(displayVal);
                     var evaluation = eval(evalStringArray.join(' '));
                     displayVal = evaluation + '';
