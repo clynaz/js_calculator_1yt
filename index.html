@@ -81,7 +81,7 @@
             switch (operator) {
                 case 'calc-add':
                     pendingVal = displayVal;
-                    displayVal = '0';
+                    displayVal = '';
                     displayValElement.innerText = displayVal;
                     evalStringArray.push(pendingVal);
                     evalStringArray.push('+');
@@ -89,7 +89,7 @@
 
                 case 'calc-subtract':
                     pendingVal = displayVal;
-                    displayVal = '0';
+                    displayVal = '';
                     displayValElement.innerText = displayVal;
                     evalStringArray.push(pendingVal);
                     evalStringArray.push('-');
@@ -97,7 +97,7 @@
 
                 case 'calc-multiply':
                     pendingVal = displayVal;
-                    displayVal = '0';
+                    displayVal = '';
                     displayValElement.innerText = displayVal;
                     evalStringArray.push(pendingVal);
                     evalStringArray.push('*');
@@ -105,7 +105,7 @@
 
                 case 'calc-divide':
                     pendingVal = displayVal;
-                    displayVal = '0';
+                    displayVal = '';
                     displayValElement.innerText = displayVal;
                     evalStringArray.push(pendingVal);
                     evalStringArray.push('/');
